@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #080A0D;
+  --panel: #0E1117;
+  --panel-hover: #131720;
+  --border: #1C2030;
+  --border-bright: #2A3050;
+  --text: #C8CDD8;
+  --text-dim: #5A6380;
+  --text-bright: #E8ECF4;
+  --orange: #FF6600;
+  --orange-dim: #CC5200;
+  --green: #00C853;
+  --red: #FF3D3D;
+  --yellow: #FFB300;
+  --blue: #4A9EFF;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  height: 100%;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-bright); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-dim); }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.cursor-blink { animation: blink 1s step-end infinite; }
+
+@keyframes pulse-orange {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.pulse-orange { animation: pulse-orange 2s ease-in-out infinite; }
