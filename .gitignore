@@ -14,3 +14,7 @@ node_modules/
 # Misc
 .DS_Store
 *.log
+
+# Claude Code local files
+.claude/
+CLAUDE.md
